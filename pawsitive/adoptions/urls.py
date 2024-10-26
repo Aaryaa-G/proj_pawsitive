@@ -1,0 +1,14 @@
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('', views.home_view, name='home'),
+    path('about/',views.about_view, name='about'),
+    path('donate/', views.donate_view, name='donate'),
+    path('volunteer/',views.volunteer_view, name='volunteer'),
+    path('adopt/', views.adopt_view, name='adopt'),
+    path('donate/form/', views.donate_form_view, name='donate_form'),
+    path('volunteer/form/',views.volunteer_form_view, name='volunteer_form'),
+    path('adopt/form/', views.adopt_form_view, name='adopt_form'),
+]
+
