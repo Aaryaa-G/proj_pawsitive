@@ -20,7 +20,7 @@ def adopt_form_view(request):
             return redirect('home')
     else:
         form = AdoptionForm()
-    return render(request, 'adoptions/adoption_form.html', {'form': form})
+    return render(request, 'adoptions/adopt_form.html', {'form': form})
 
 def volunteer_form_view(request):
     if request.method == 'POST':
@@ -39,7 +39,7 @@ def home_view(request):
     return render(request, 'adoptions/home.html')
 
 def about_view(request):
-    return render(request, 'adoptions/about.html')
+    return render(request, 'adoptions/about-us.html')
 
 def donate_view(request):
     return render(request, 'adoptions/donate.html')

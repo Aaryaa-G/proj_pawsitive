@@ -5,6 +5,7 @@
     <meta name="keywords" content="Donate Now">
     <meta name="description" content="">
     <title>DONATE</title>
+    {% load static %}
     <link rel="stylesheet" href="{% static 'adoptions/css/nicepage.css' %}" media="screen">
 <link rel="stylesheet" href="{% static 'adoptions/css/DONATE.css' %}" media="screen">
     <script class="u-script" type="text/javascript" src="{% static 'adoptions/js/jquery.js' %}" defer=""></script>
@@ -84,7 +85,7 @@
           <div class="u-container-layout u-container-layout-1">
             <h1 class="u-align-left u-custom-font u-font-merriweather u-text u-title u-text-1">Donate Now</h1>
             <p class="u-align-left u-custom-font u-font-merriweather u-large-text u-text u-text-variant u-text-2">Thank you for considering to donate and engage with us. Your support matters!</p>
-            <a href="{% url 'volunteer' %}" class="u-align-left u-btn u-button-style u-custom-font u-font-merriweather u-palette-2-base u-btn-1" data-animation-name="pulse" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="" target="_blank" rel="nofollow">DONATE </a>
+            <a href="{% url 'donate_form' %}" class="u-align-left u-btn u-button-style u-custom-font u-font-merriweather u-palette-2-base u-btn-1" data-animation-name="pulse" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="" target="_blank" rel="nofollow">DONATE </a>
           </div>
         </div>
       </div>

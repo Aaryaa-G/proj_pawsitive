@@ -5,6 +5,7 @@
     <meta name="keywords" content="Safe Haven, Rescue Animals Find Loving Homes, Paw Palace, Loving Shelter, Finding Forever Families for Animals, Safe Haven, Pet Refuge, Saving Lives Through Animal Adoption, Helping Homeless Animals Find Hope, Furry Haven, Animal Haven, Supporting Animal Welfare Through Adoption, Paw Palace">
     <meta name="description" content="">
     <title>HOME</title>
+    {% load static %}
     <link rel="stylesheet" href="{% static 'adoptions/css/nicepage.css' %}" media="screen">
 <link rel="stylesheet" href="{% static 'adoptions/css/HOME.css' %}" media="screen">
     <script class="u-script" type="text/javascript" src="{% static 'adoptions/js/jquery.js' %}" defer=""></script>
@@ -115,7 +116,7 @@
                             <div class="u-container-layout u-container-layout-3"><span class="u-align-center u-file-icon u-icon u-text-palette-2-dark-1 u-icon-1"><img src="images/3010900-25fa947b.png" alt=""></span>
                               <h4 class="u-align-center u-custom-font u-font-merriweather u-text u-text-palette-2-light-1 u-text-3">Home for All</h4>
                               <p class="u-align-center u-custom-font u-font-merriweather u-text u-text-4">We offer adoption services, connecting pets with loving and responsible families.</p>
-                              <a href="PROJECT-PAWSITIVE/ADOPT.html" class="u-align-center u-border-2 u-border-active-grey-50 u-border-hover-grey-50 u-border-palette-2-light-1 u-btn u-btn-round u-button-style u-custom-font u-font-merriweather u-none u-radius-50 u-text-body-color u-btn-1" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="" rel="nofollow">ADOPT </a>
+                              <a href="{% url 'adopt' %}" class="u-align-center u-border-2 u-border-active-grey-50 u-border-hover-grey-50 u-border-palette-2-light-1 u-btn u-btn-round u-button-style u-custom-font u-font-merriweather u-none u-radius-50 u-text-body-color u-btn-1" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="" rel="nofollow">ADOPT </a>
                             </div>
                           </div>
                         </div>
@@ -125,7 +126,7 @@
                           <div class="u-align-left u-container-align-left u-container-style u-layout-cell u-radius u-shape-round u-similar-fill u-size-30 u-white u-layout-cell-4">
                             <div class="u-border-3 u-border-palette-2-light-1 u-container-layout u-container-layout-4">
                               <h3 class="u-align-center u-custom-font u-font-merriweather u-text u-text-5">Join Us In Providing Shelter for Homeless Pets</h3>
-                              <a href="PROJECT-PAWSITIVE/VOLUNTEER.html" class="u-align-center u-border-2 u-border-active-grey-50 u-border-hover-grey-50 u-border-palette-2-light-1 u-btn u-btn-round u-button-style u-custom-font u-font-merriweather u-none u-radius-50 u-text-body-color u-btn-2" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="" rel="nofollow">VOLUNTEER </a>
+                              <a href="{% url 'volunteer' %}" class="u-align-center u-border-2 u-border-active-grey-50 u-border-hover-grey-50 u-border-palette-2-light-1 u-btn u-btn-round u-button-style u-custom-font u-font-merriweather u-none u-radius-50 u-text-body-color u-btn-2" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="" rel="nofollow">VOLUNTEER </a>
                             </div>
                           </div>
                           <div class="u-align-left u-container-align-left u-container-style u-image u-image-default u-layout-cell u-right-cell u-size-30 u-image-3" data-image-width="720" data-image-height="1600">
@@ -143,7 +144,7 @@
                     <div class="u-container-layout u-valign-bottom u-container-layout-6"><span class="u-align-center u-file-icon u-icon u-text-palette-2-dark-1 u-icon-2"><img src="images/865701-3b6ffb12.png" alt=""></span>
                       <h4 class="u-align-center u-custom-font u-font-merriweather u-text u-text-palette-2-light-1 u-text-6">Caring Haven</h4>
                       <p class="u-align-center u-custom-font u-font-merriweather u-text u-text-7">Donations and support from the community are crucial for the shelter's operations and services.</p>
-                      <a href="PROJECT-PAWSITIVE/DONATE.html" class="u-align-center u-border-2 u-border-active-grey-50 u-border-hover-grey-50 u-border-palette-2-light-1 u-btn u-btn-round u-button-style u-custom-font u-font-merriweather u-none u-radius-50 u-text-body-color u-btn-3" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="" rel="nofollow">DONATE</a>
+                      <a href="{% url 'donate' %}" class="u-align-center u-border-2 u-border-active-grey-50 u-border-hover-grey-50 u-border-palette-2-light-1 u-btn u-btn-round u-button-style u-custom-font u-font-merriweather u-none u-radius-50 u-text-body-color u-btn-3" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="" rel="nofollow">DONATE</a>
                     </div>
                   </div>
                   <div class="u-align-left u-container-align-left u-container-style u-image u-image-default u-layout-cell u-right-cell u-size-40 u-image-4" data-image-width="425" data-image-height="283">
