@@ -10,9 +10,16 @@
 <body>
     <h1>Adoption Form</h1>
     <p>Please fill out the form below to adopt a dog or cat.</p>
+    {% if messages %}
+        <div class="messages">
+            {% for message in messages %}
+                <p class="message {{ message.tags }}">{{ message }}</p>
+            {% endfor %}
+        </div>
+    {% endif %} 
     
-    <form action="/submit_adoption" method="POST" enctype="multipart/form-data">
-        <!-- Full Name -->
+    <form action="{% url 'adopt_form' %}" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}   
         <label for="name">Full Name*</label><br>
         <input type="text" id="name" name="name" required><br><br>
         
@@ -60,11 +67,11 @@
         
         <!-- Love and Attention -->
         <label>Do you have time to provide adequate love and attention?*</label><br>
-        <input type="radio" id="love_yes" name="love_attention" value="Yes" required>
+        <input type="radio" id="love_yes" name="time_for_pet" value="Yes" required>
         <label for="love_yes">Yes</label><br>
-        <input type="radio" id="love_no" name="love_attention" value="No">
+        <input type="radio" id="love_no" name="time_for_pet" value="No">
         <label for="love_no">No</label><br>
-        <input type="radio" id="love_maybe" name="love_attention" value="Maybe">
+        <input type="radio" id="love_maybe" name="time_for_pet" value="Maybe">
         <label for="love_maybe">Maybe</label><br><br>
         
         <!-- Past Experience with Pets -->
@@ -81,7 +88,7 @@
         
         <!-- Aadhar Card Number -->
         <label for="aadhar">Aadhar Card Number</label><br>
-        <input type="text" id="aadhar" name="aadhar"><br><br>
+        <input type="text" id="aadhar" name="aadhar_number"><br><br>
         
         <!-- Consent Form Upload -->
         <label for="consent_form">Consent Form*</label><br>
@@ -89,11 +96,11 @@
         
         <!-- Agreement for Sending Photos -->
         <label>Do you agree to send photos of dogs/cats on a regular basis (Monthly)?</label><br>
-        <input type="radio" id="photos_yes" name="photos_agreement" value="Yes">
+        <input type="radio" id="photos_yes" name="regular_updates" value="Yes">
         <label for="photos_yes">Yes</label><br>
-        <input type="radio" id="photos_no" name="photos_agreement" value="No">
+        <input type="radio" id="photos_no" name="regular_updates" value="No">
         <label for="photos_no">No</label><br>
-        <input type="radio" id="photos_maybe" name="photos_agreement" value="Maybe">
+        <input type="radio" id="photos_maybe" name="regular_updates" value="Maybe">
         <label for="photos_maybe">Maybe</label><br><br>
         
         <!-- Photo of Pet Upload -->

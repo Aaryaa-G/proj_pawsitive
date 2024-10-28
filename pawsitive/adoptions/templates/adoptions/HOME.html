@@ -58,7 +58,7 @@
             </a>
           </div>
           <div class="u-custom-menu u-nav-container">
-            <ul class="u-custom-font u-font-merriweather u-nav u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="home/" rel="nofollow">HOME</a>
+            <ul class="u-custom-font u-font-merriweather u-nav u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'home' %}" rel="nofollow">HOME</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'about' %}" rel="nofollow">ABOUT</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'donate' %}" rel="nofollow">DONATE</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'adopt' %}" rel="nofollow">ADOPT</a>
@@ -69,7 +69,7 @@
             <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
               <div class="u-inner-container-layout u-sidenav-overflow">
                 <div class="u-menu-close"></div>
-                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-3"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="home/" rel="nofollow">HOME</a>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-3"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'home' %}" rel="nofollow">HOME</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'about' %}" rel="nofollow">ABOUT</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'donate' %}" rel="nofollow">DONATE</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'adopt' %}" rel="nofollow">ADOPT</a>
@@ -113,7 +113,7 @@
                             <div class="u-container-layout u-container-layout-2"></div>
                           </div>
                           <div class="u-align-center u-container-align-center u-container-style u-layout-cell u-opacity u-opacity-95 u-palette-2-light-3 u-radius u-right-cell u-shape-round u-similar-fill u-size-30 u-layout-cell-3" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
-                            <div class="u-container-layout u-container-layout-3"><span class="u-align-center u-file-icon u-icon u-text-palette-2-dark-1 u-icon-1"><img src="images/3010900-25fa947b.png" alt=""></span>
+                            <div class="u-container-layout u-container-layout-3"><span class="u-align-center u-file-icon u-icon u-text-palette-2-dark-1 u-icon-1"><img src="{% static 'adoptions/images/3010900-25fa947b.png' %}" alt=""></span>
                               <h4 class="u-align-center u-custom-font u-font-merriweather u-text u-text-palette-2-light-1 u-text-3">Home for All</h4>
                               <p class="u-align-center u-custom-font u-font-merriweather u-text u-text-4">We offer adoption services, connecting pets with loving and responsible families.</p>
                               <a href="{% url 'adopt' %}" class="u-align-center u-border-2 u-border-active-grey-50 u-border-hover-grey-50 u-border-palette-2-light-1 u-btn u-btn-round u-button-style u-custom-font u-font-merriweather u-none u-radius-50 u-text-body-color u-btn-1" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="" rel="nofollow">ADOPT </a>
@@ -141,7 +141,7 @@
               <div class="u-size-20 u-size-60-md">
                 <div class="u-layout-row">
                   <div class="u-align-center u-container-align-center u-container-style u-layout-cell u-left-cell u-opacity u-opacity-95 u-palette-2-light-3 u-radius u-shape-round u-similar-fill u-size-20 u-layout-cell-6" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
-                    <div class="u-container-layout u-valign-bottom u-container-layout-6"><span class="u-align-center u-file-icon u-icon u-text-palette-2-dark-1 u-icon-2"><img src="images/865701-3b6ffb12.png" alt=""></span>
+                    <div class="u-container-layout u-valign-bottom u-container-layout-6"><span class="u-align-center u-file-icon u-icon u-text-palette-2-dark-1 u-icon-2"><img src="{% static 'adoptions/images/865701-3b6ffb12.png' %}" alt=""></span>
                       <h4 class="u-align-center u-custom-font u-font-merriweather u-text u-text-palette-2-light-1 u-text-6">Caring Haven</h4>
                       <p class="u-align-center u-custom-font u-font-merriweather u-text u-text-7">Donations and support from the community are crucial for the shelter's operations and services.</p>
                       <a href="{% url 'donate' %}" class="u-align-center u-border-2 u-border-active-grey-50 u-border-hover-grey-50 u-border-palette-2-light-1 u-btn u-btn-round u-button-style u-custom-font u-font-merriweather u-none u-radius-50 u-text-body-color u-btn-3" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="" rel="nofollow">DONATE</a>

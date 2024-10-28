@@ -1,13 +1,16 @@
 from django.shortcuts import render, redirect
 from .models import Donation, Adoption, Volunteer
 from .form import DonationForm, AdoptionForm, VolunteerForm
+from django.contrib import messages
+
 
 def donate_form_view(request):
     if request.method == 'POST':
         form = DonationForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            return redirect('thank_you')
+            messages.success(request, 'Thank you for your donation!')
+            return redirect('donate_form')
     else:
         form = DonationForm()
     return render(request, 'adoptions/donation_form.html', {'form': form})
@@ -17,7 +20,8 @@ def adopt_form_view(request):
         form = AdoptionForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            return redirect('home')
+            messages.success(request, 'Thank you for your adoption!')
+            return redirect('adopt_form')
     else:
         form = AdoptionForm()
     return render(request, 'adoptions/adopt_form.html', {'form': form})
@@ -27,7 +31,8 @@ def volunteer_form_view(request):
         form = VolunteerForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('home')
+            messages.success(request, 'Thank you for thinking to be a volunteer!See you soon....')
+            return redirect('volunteer_form')
     else:
         form = VolunteerForm()
     return render(request, 'adoptions/volunteer_form.html', {'form': form})

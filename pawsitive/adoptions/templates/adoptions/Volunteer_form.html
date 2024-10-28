@@ -16,9 +16,16 @@
         <li><a href="https://www.instagram.com/unionfor_animalsmumbai/" target="_blank">1.UFA</a></li>
         <li><a href="https://www.instagram.com/project__pawsitive/" target="_blank">2.Project Pawsitive</a></li>
     </ul>
-    
-    <form action="/submit_volunteer" method="POST">
-        <!-- Email Field -->
+    {% if messages %}
+        <div class="messages">
+            {% for message in messages %}
+                <p class="message {{ message.tags }}">{{ message }}</p>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    <form action="{% url 'volunteer_form' %}" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}   
         <label for="email">Email*</label><br>
         <input type="email" id="email" name="email" required><br><br>
         
@@ -32,7 +39,7 @@
         
         <!-- SVU Membership Field -->
         <label for="svu_member">You are a member of SVU as*</label><br>
-        <select id="svu_member" name="svu_member" required>
+        <select id="svu_member" name="member_type" required>
             <option value="Student">Student</option>
             <option value="Administrative Staff">Member - Administrative Staff</option>
             <option value="Faculty">Faculty</option>
@@ -40,7 +47,7 @@
         
         <!-- Institute Affiliation Field -->
         <label for="institute">Institute Affiliation - Which college of SVU do you belong to?*</label><br>
-        <select id="institute" name="institute" required>
+        <select id="institute" name="affiliation" required>
             <option value="Somaiya School of Design">Somaiya School of Design</option>
             <option value="K J Somaiya College of Education">K J Somaiya College of Education</option>
             <option value="K J Somaiya College of Engineering">K J Somaiya College of Engineering</option>
@@ -63,31 +70,31 @@
         
         <!-- Volunteering Experience Field -->
         <label>Do you have prior experience in volunteering with regard to community animals or stray animals (dogs & cats to be specific)?*</label><br>
-        <input type="radio" id="experience_yes" name="experience" value="Yes" required>
+        <input type="radio" id="experience_yes" name="experience_with_animals" value="Yes" required>
         <label for="experience_yes">Yes</label><br>
-        <input type="radio" id="experience_no" name="experience" value="No">
+        <input type="radio" id="experience_no" name="experience_with_animals" value="No">
         <label for="experience_no">No</label><br><br>
         
         <!-- Areas of Interest Field -->
         <label>In which areas are you interested in volunteering? (Select all that apply)*</label><br>
-        <input type="checkbox" id="feeding" name="volunteering_areas" value="Animal Feeding & Watering">
+        <input type="checkbox" id="feeding" name="volunteer_areas" value="Animal Feeding & Watering">
         <label for="feeding">Animal Feeding & Watering</label><br>
-        <input type="checkbox" id="fundraising" name="volunteering_areas" value="Fundraising & Donation Drives">
+        <input type="checkbox" id="fundraising" name="volunteer_areas" value="Fundraising & Donation Drives">
         <label for="fundraising">Fundraising & Donation Drives</label><br>
-        <input type="checkbox" id="vaccination" name="volunteering_areas" value="Vaccination & Sterilisation Drives">
+        <input type="checkbox" id="vaccination" name="volunteer_areas" value="Vaccination & Sterilisation Drives">
         <label for="vaccination">Vaccination & Sterilisation Drives</label><br>
-        <input type="checkbox" id="adoption" name="volunteering_areas" value="Adoption Drives">
+        <input type="checkbox" id="adoption" name="volunteer_areas" value="Adoption Drives">
         <label for="adoption">Adoption Drives for new pups & kittens</label><br>
-        <input type="checkbox" id="veterinary" name="volunteering_areas" value="Assisting with Veterinary Care">
+        <input type="checkbox" id="veterinary" name="volunteer_areas" value="Assisting with Veterinary Care">
         <label for="veterinary">Assisting with Veterinary Care</label><br>
-        <input type="checkbox" id="cleaning" name="volunteering_areas" value="Cleaning and Maintaining Animal Areas">
+        <input type="checkbox" id="cleaning" name="volunteer_areas" value="Cleaning and Maintaining Animal Areas">
         <label for="cleaning">Cleaning and Maintaining Animal Areas</label><br>
-        <input type="checkbox" id="social_media" name="volunteering_areas" value="Social Media Management">
+        <input type="checkbox" id="social_media" name="volunteer_areas" value="Social Media Management">
         <label for="social_media">Social Media Management</label><br><br>
         
         <!-- Why Volunteer Field -->
         <label for="why_volunteer">Why do you want to volunteer with Union for Animals- our community animal welfare group?</label><br>
-        <textarea id="why_volunteer" name="why_volunteer" rows="4" cols="50"></textarea><br><br>
+        <textarea id="why_volunteer" name="reason_for_volunteering" rows="4" cols="50"></textarea><br><br>
         
         <!-- Submit Button -->
         <button type="submit">Submit</button>

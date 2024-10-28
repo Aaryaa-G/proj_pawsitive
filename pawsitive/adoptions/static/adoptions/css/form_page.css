@@ -69,6 +69,48 @@ button[type="submit"] {
     transition: background-color 0.3s;
 }
 
+/* Styling the messages container */
+.messages {
+    padding: 10px;
+    margin: 15px 0;
+    border-radius: 5px;
+    width: 90%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* General message styling */
+.message {
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 16px;
+}
+
+/* Specific styles based on message type */
+.message.success {
+    background-color: #4CAF50; /* Green for success */
+    border: 1px solid #3e8e41;
+}
+
+.message.error {
+    background-color: #f44336; /* Red for error */
+    border: 1px solid #d32f2f;
+}
+
+.message.info {
+    background-color: #2196F3; /* Blue for info */
+    border: 1px solid #1976D2;
+}
+
+.message.warning {
+    background-color: #ff9800; /* Orange for warning */
+    border: 1px solid #e65100;
+}
+
+
 /* Hover effect for the submit button */
 button[type="submit"]:hover {
     background-color: #218838;

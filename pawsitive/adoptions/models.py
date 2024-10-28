@@ -4,7 +4,7 @@ class Donation(models.Model):
     email_id = models.EmailField()
     name = models.CharField(max_length=100)
     contact = models.CharField(max_length=15)
-    payment_screenshot = models.ImageField(upload_to='payments/')
+    payment_screenshot = models.ImageField(upload_to='payment/')
 
     def __str__(self):
         return self.name
@@ -18,9 +18,9 @@ class Adoption(models.Model):
     adults = models.IntegerField()
     children = models.IntegerField()
     allergy = models.CharField(max_length=10, choices=[('Yes', 'Yes'), ('No', 'No'), ('Maybe', 'Maybe')])
-    agreement = models.BooleanField()
-    time_for_pet = models.BooleanField()
-    experience = models.BooleanField()
+    agreement = models.CharField(max_length=10, choices=[('Yes', 'Yes'), ('No', 'No')])
+    time_for_pet = models.CharField(max_length=10, choices=[('Yes', 'Yes'), ('No', 'No'), ('Maybe', 'Maybe')])
+    experience = models.CharField(max_length=10, choices=[('Yes', 'Yes'), ('No', 'No')])
     pet_name = models.CharField(max_length=100)
     pet_gender = models.CharField(max_length=10)
     aadhar_number = models.CharField(max_length=12)
@@ -30,6 +30,7 @@ class Adoption(models.Model):
 
     def __str__(self):
         return self.pet_name
+
 
 class Volunteer(models.Model):
     name = models.CharField(max_length=100)
