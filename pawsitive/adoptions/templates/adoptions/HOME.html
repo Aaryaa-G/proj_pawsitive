@@ -53,33 +53,31 @@
           <div class="menu-collapse u-custom-font u-font-merriweather" style="font-size: 1.5rem; font-weight: 700;">
             <a class="u-button-style u-custom-text-hover-color u-nav-link" href="#">
               <svg class="u-svg-link" viewBox="0 0 24 24"><use xlink:href="#svg-e6a9"></use></svg>
-              <svg class="u-svg-content" version="1.1" id="svg-e6a9" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
-</g></svg>
+              <svg class="u-svg-content" version="1.1" id="svg-e6a9" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/2000/svg">
+                <g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect></g>
+              </svg>
             </a>
           </div>
           <div class="u-custom-menu u-nav-container">
-            <ul class="u-custom-font u-font-merriweather u-nav u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'home' %}" rel="nofollow">HOME</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'about' %}" rel="nofollow">ABOUT</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'donate' %}" rel="nofollow">DONATE</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'adopt' %}" rel="nofollow">ADOPT</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'volunteer' %}" rel="nofollow">VOLUNTEER</a>
-</li></ul>
-          </div>
-          <div class="u-custom-menu u-nav-container-collapse">
-            <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
-              <div class="u-inner-container-layout u-sidenav-overflow">
-                <div class="u-menu-close"></div>
-                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-3"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'home' %}" rel="nofollow">HOME</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'about' %}" rel="nofollow">ABOUT</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'donate' %}" rel="nofollow">DONATE</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'adopt' %}" rel="nofollow">ADOPT</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'volunteer' %}" rel="nofollow">VOLUNTEER</a>
-</li></ul>
-              </div>
-            </div>
-            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+            <ul class="u-custom-font u-font-merriweather u-nav u-unstyled u-nav-2">
+              <li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'home' %}" rel="nofollow">HOME</a></li>
+              <li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'about' %}" rel="nofollow">ABOUT</a></li>
+              <li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'donate' %}" rel="nofollow">DONATE</a></li>
+              <li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'adopt' %}" rel="nofollow">ADOPT</a></li>
+              <li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'volunteer' %}" rel="nofollow">VOLUNTEER</a></li>
+              
+              <!-- User Icon for Admin Page -->
+              <li class="u-nav-item u-nav-icon">
+                <a class="u-button-style u-nav-link" href="{% url 'admin:index' %}" title="Admin">
+                  <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                  </svg>
+                </a>
+              </li>
+            </ul>
           </div>
         </nav>
+        
       </div></header> 
     <section class="skrollable skrollable-between u-align-center u-clearfix u-container-align-center u-image u-shading u-section-1" id="carousel_6fb7" src="" data-image-width="1050" data-image-height="588">
       <div class="u-clearfix u-sheet u-sheet-1">
