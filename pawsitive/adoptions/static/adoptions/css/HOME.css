@@ -6,6 +6,42 @@
 .u-section-1 .u-sheet-1 {
   min-height: 780px;
 }
+/* Style for the main navigation container */
+.u-nav-container {
+  display: flex;
+  justify-content: space-between; /* Space between nav list and icon */
+  align-items: center; /* Vertically center items */
+  width: 100%; /* Ensure full width */
+}
+
+/* Style for the nav list */
+.u-nav {
+  display: flex;
+  list-style: none; /* Remove default list styling */
+  margin: 0;
+  padding: 0;
+  flex-grow: 1; /* Allow the nav list to take up space */
+}
+
+/* Style for each nav item */
+.u-nav-item {
+  margin-right: 20px; /* Space between nav items */
+}
+
+/* Remove margin for the last nav item (icon) */
+.u-nav-item.u-nav-icon {
+  margin-right: 0;
+  margin-left: auto; /* Push the icon to the right */
+}
+
+/* Style for the SVG icon */
+.u-nav-icon svg {
+  width: 24px; /* Adjust icon width */
+  height: 24px; /* Adjust icon height */
+  cursor: pointer; /* Change cursor on hover */
+}
+
+
 
 .u-section-1 .u-text-1 {
   text-shadow: 2px 2px 14px rgba(0,0,0,0.4);

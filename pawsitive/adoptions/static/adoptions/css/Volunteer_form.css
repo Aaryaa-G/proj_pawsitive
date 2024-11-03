@@ -1,182 +1,102 @@
-/* Style for the body */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
+html, body {
+    height: 100%;
     margin: 0;
-    padding: 20px;
+    background-image: url("/static/adoptions/images/volunteer_background.PNG");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: Georgia, serif;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 30px; 
 }
 
-/* Style for the main heading */
-h1 {
-    color: #343a40;
+select {
+    color: white; 
+    background-color: transparent; 
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 15px;
+    font-family: Georgia, serif;
+}
+
+select option {
+    color: black; 
+    background-color: white; 
+}
+
+
+.form-container {
+    width: 90%;
+    max-width: 650px; 
+    background-color: rgba(0, 0, 0, 0.85); 
+    padding: 30px; 
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); 
+}
+
+h1, h3, h5 {
     text-align: center;
-    font-size: 36px;
+    margin: 10px 0;
+    color: #f0f0f0;
 }
 
-/* Style for the paragraph */
-p {
-    color: #495057;
-    text-align: center;
-    font-size: 18px;
-}
-
-/* Center the form container */
-form {
-    max-width: 700px;
-    margin: 0 auto;
-    background-color: #ffffff;
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Style for form labels */
-label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 8px;
-    color: #495057;
-}
-
-/* Style for form input fields, select, and textarea */
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-input[type="number"],
-input[type="file"],
-select,
-textarea {
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form select,
+form textarea {
     width: 100%;
     padding: 10px;
-    margin-bottom: 16px;
-    border: 1px solid #ced4da;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-/* Style for checkbox and radio button labels */
-input[type="checkbox"],
-input[type="radio"] {
-    margin-right: 8px;
-}
-
-.messages {
-    padding: 10px;
-    margin: 15px 0;
+    margin: 10px 0;
+    border: 1px solid #ccc; 
     border-radius: 5px;
-    width: 90%;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+    background-color: rgba(255, 255, 255, 0.1); 
+    color: #fff;
 }
 
-/* General message styling */
+form label {
+    font-weight: bold;
+    margin-top: 10px;
+    color: #ddd;
+}
+
+form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #00a5a5; 
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+form button:hover {
+    background-color: #12b0d0; 
+}
+.messages {
+    color: #ffcc00;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
 .message {
     padding: 10px;
-    margin: 5px 0;
-    border-radius: 3px;
-    color: #fff;
-    font-size: 16px;
+    border-radius: 5px;
 }
 
-/* Specific styles based on message type */
 .message.success {
-    background-color: #4CAF50; /* Green for success */
-    border: 1px solid #3e8e41;
+    background-color: #28a745;
+    color: white;
 }
 
 .message.error {
-    background-color: #f44336; /* Red for error */
-    border: 1px solid #d32f2f;
-}
-
-.message.info {
-    background-color: #2196F3; /* Blue for info */
-    border: 1px solid #1976D2;
-}
-
-.message.warning {
-    background-color: #ff9800; /* Orange for warning */
-    border: 1px solid #e65100;
-}
-
-/* Style for the submit button */
-button[type="submit"] {
-    background-color: #28a745;
-    color: #ffffff;
-    border: none;
-    padding: 12px 20px;
-    font-size: 18px;
-    border-radius: 4px;
-    cursor: pointer;
-    width: 100%;
-    transition: background-color 0.3s;
-}
-
-/* Hover effect for the submit button */
-button[type="submit"]:hover {
-    background-color: #218838;
-}
-
-/* Style for the textarea */
-textarea {
-    resize: vertical;
-}
-
-/* Style for links */
-a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-/* Hover effect for links */
-a:hover {
-    text-decoration: underline;
-}
-
-/* Responsive adjustments */
-@media (max-width: 600px) {
-    h1 {
-        font-size: 28px;
-    }
-    p {
-        font-size: 16px;
-    }
-    form {
-        padding: 15px;
-    }
-    button[type="submit"] {
-        font-size: 16px;
-        padding: 10px 15px;
-    }
-}
-
-/* Style for the list container */
-ul {
-    list-style-type: none; /* Remove default bullet points */
-    padding: 0;
-    text-align: center;
-}
-
-/* Style for individual list items */
-ul li {
-    margin: 10px 0; /* Add space between each item */
-}
-
-/* Style for the links */
-ul li a {
-    color: #007bff; /* Link color */
-    font-size: 18px;
-    font-weight: bold;
-    text-decoration: none; /* Remove underline */
-    padding: 8px 16px; /* Add padding for a better clickable area */
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
-}
-
-/* Hover effect for links */
-ul li a:hover {
-    background-color: #f8f9fa; /* Light background color on hover */
-    color: #343a40; /* Change text color on hover */
-    text-decoration: underline; /* Optionally add underline on hover */
+    background-color: #dc3545;
+    color: white;
 }
