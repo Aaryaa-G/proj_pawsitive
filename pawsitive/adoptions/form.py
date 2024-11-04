@@ -1,5 +1,5 @@
 from django import forms
-from .models import Donation, Adoption, Volunteer
+from .models import Donation, Adoption, Volunteer,PreAdoption
 
 class DonationForm(forms.ModelForm):
     class Meta:
@@ -14,4 +14,9 @@ class AdoptionForm(forms.ModelForm):
 class VolunteerForm(forms.ModelForm):
     class Meta:
         model = Volunteer
+        fields = '__all__'
+
+class PreAdoptionForm(forms.ModelForm):
+    class Meta:
+        model = PreAdoption
         fields = '__all__'

@@ -16,11 +16,21 @@
     
     
     
-    <script type="application/ld+json">{
-		"@context": "http://schema.org",
-		"@type": "Organization",
-		"name": "Site1"
-}</script>
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "name": "Site1"
+      }
+      </script>
+      
+      <!-- JavaScript for Dropdown Toggle -->
+      <script>
+      function toggleDropdown() {
+        const dropdown = document.getElementById("adoptionDropdown");
+        dropdown.style.display = dropdown.style.display === "none" ? "block" : "none";
+      }
+      </script>
     <meta name="theme-color" content="#478ac9">
     <meta property="og:title" content="ADOPT">
     <meta property="og:description" content="">
@@ -96,9 +106,18 @@
                   <div class="u-container-align-left u-container-style u-layout-cell u-right-cell u-size-60 u-layout-cell-1">
                     <div class="u-container-layout u-valign-middle u-container-layout-1">
                       <h2 class="u-align-left u-custom-font u-font-merriweather u-text u-text-1">Find Love</h2>
-                      <p class="u-align-left u-custom-font u-font-merriweather u-text u-text-2">Welcome to our animal adoption page! We're excited that you're considering giving a loving home to a furry friend. Please fill out the form below to start the adoption process.</p>
-                      <a href="{% url 'adopt_form' %}" class="u-align-left u-btn u-button-style u-custom-font u-font-merriweather u-palette-2-base u-btn-1" target="_blank" rel="nofollow">adoption​ Form</a>
+                      <p class="u-align-left u-custom-font u-font-merriweather u-text u-text-2">
+                        Welcome to our animal adoption page! We're excited that you're considering giving a loving home to a furry friend. Please fill out the form below to start the adoption process.
+                      </p>
+                      <button class="u-align-left u-btn u-button-style u-custom-font u-font-merriweather u-palette-2-base u-btn-1" onclick="toggleDropdown()">Adoption Form</button>
+                    
+                      <!-- Dropdown menu -->
+                      <div id="adoptionDropdown" class="dropdown-menu" style="display: none;">
+                        <a href="{% url 'preadoption_form' %}" class="dropdown-item" target="_blank">Pre-Adopt Form</a><br>
+                        <a href="{% url 'adopt_form' %}" class="dropdown-item" target="_blank">Post-Adopt Form</a>
+                      </div>
                     </div>
+                    
                   </div>
                 </div>
               </div>

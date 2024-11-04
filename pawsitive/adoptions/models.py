@@ -45,3 +45,19 @@ class Volunteer(models.Model):
 
     def __str__(self):
         return self.name
+
+class PreAdoption(models.Model):
+    first_name = models.CharField(max_length=100)
+    last_name = models.CharField(max_length=100)
+    email = models.EmailField()
+    address = models.TextField()
+    phone = models.CharField(max_length=15)
+    dog_name = models.CharField(max_length=100, blank=True, null=True)
+    photo = models.ImageField(upload_to='uploads/pet_photos/', blank=True, null=True)
+    owned_pets = models.BooleanField()
+    other_pets = models.BooleanField()
+    schedule = models.TextField()
+    financially_prepared = models.BooleanField()
+
+    def __str__(self):
+        return f"{self.first_name} {self.last_name}"

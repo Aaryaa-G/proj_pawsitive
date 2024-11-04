@@ -12,7 +12,8 @@ urlpatterns = [
     path('adopt/', views.adopt_view, name='adopt'),
     path('donate/form/', views.donate_form_view, name='donate_form'),
     path('volunteer/form/',views.volunteer_form_view, name='volunteer_form'),
-    path('adopt/form/', views.adopt_form_view, name='adopt_form'),
+    path('adopt/form/', views.postadoption_form_view, name='adopt_form'),
+    path('adopt/preadoptform/', views.preadoption_form_view, name='preadoption_form'),
 ]
 
 if settings.DEBUG:

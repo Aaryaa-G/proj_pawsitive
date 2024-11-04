@@ -29,13 +29,14 @@
 /* Remove margin for the last nav item (icon) */
 .u-nav-item.u-nav-icon {
   margin-right: 0;
-  margin-left: auto; /* Push the icon to the right */
+  margin-left: auto;
+  padding-right: 15px; /* Push the icon to the right */
 }
 
 /* Style for the SVG icon */
 .u-nav-icon svg {
-  width: 24px; /* Adjust icon width */
-  height: 24px; /* Adjust icon height */
+  width: 25px; /* Adjust icon width */
+  height: 25px; /* Adjust icon height */
   cursor: pointer; /* Change cursor on hover */
 }
 .u-section-1 .u-group-1 {
