@@ -62,7 +62,6 @@ form input[type="number"],
 form input[type="file"],
 form input[type="radio"] {
     width: 100%;
-    padding: 12px;
     margin: 10px 0;
     border: 1px solid white;
     border-radius: 5px;
@@ -77,8 +76,6 @@ form input[type="radio"] {
     display: flex;
     flex-direction: column;
     gap: 4px;
-    width: 100%;
-    margin-bottom: 15px;
 }
 
 .radio-group label, .option-group label, .checkbox-group label {

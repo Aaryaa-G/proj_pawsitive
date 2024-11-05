@@ -75,15 +75,18 @@ form input[type="radio"] {
 /* Radio button group */
 form .radio-group {
     display: flex;
-    justify-content: flex-start;
+    align-items: center; /* Vertically centers the radio buttons */
+    justify-content: flex-start; /* Aligns items to the left */
+    gap: 4px; /* Adds spacing between radio options */
+    flex-wrap: wrap; /* Wraps items if they don’t fit in one line */
     width: 100%;
-    margin-bottom: 15px;
 }
 
 .radio-group label {
-    margin-right: 15px;
     font-weight: normal;
+    cursor: pointer; /* Makes it easier to select by clicking on the label */
 }
+
 
 /* Submit button styling */
 form button {
