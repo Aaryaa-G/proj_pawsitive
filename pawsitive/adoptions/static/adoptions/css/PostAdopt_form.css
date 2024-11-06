@@ -73,19 +73,27 @@ form input[type="radio"] {
 }
 
 /* Radio button group */
-form .radio-group {
+.radio-group {
     display: flex;
-    align-items: center; /* Vertically centers the radio buttons */
-    justify-content: flex-start; /* Aligns items to the left */
-    gap: 4px; /* Adds spacing between radio options */
-    flex-wrap: wrap; /* Wraps items if they don’t fit in one line */
-    width: 100%;
+    flex-direction: column; /* Stack each radio option vertically */
+    gap: 8px;
+     /* Space between each radio option */
+     /* Space between each radio option */
+}
+
+.radio-group div {
+    display: flex;
+    align-items: center; /* Align radio button and label horizontally */
+    gap: 4px;
+    gap: 4px;
+     /* Space between radio button and label */
 }
 
 .radio-group label {
     font-weight: normal;
-    cursor: pointer; /* Makes it easier to select by clicking on the label */
+    cursor: pointer;
 }
+
 
 
 /* Submit button styling */

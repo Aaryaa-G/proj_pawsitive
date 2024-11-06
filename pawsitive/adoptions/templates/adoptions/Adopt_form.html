@@ -50,29 +50,54 @@
         <input type="number" id="children" name="children" min="0" required><br><br>
 
         <!-- Allergy Question -->
-        <label>Does anyone in the family have a known allergy to dogs/cats?*</label><br>
+        <!-- Allergy Question -->
+<!-- Allergy Question -->
+<label>Does anyone in the family have a known allergy to dogs/cats?*</label>
+<div class="radio-group">
+    <div>
         <input type="radio" id="allergy_yes" name="allergy" value="Yes" required>
-        <label for="allergy_yes">Yes</label><br>
+        <label for="allergy_yes">Yes</label>
+    </div>
+    <div>
         <input type="radio" id="allergy_no" name="allergy" value="No">
-        <label for="allergy_no">No</label><br>
+        <label for="allergy_no">No</label>
+    </div>
+    <div>
         <input type="radio" id="allergy_maybe" name="allergy" value="Maybe">
-        <label for="allergy_maybe">Maybe</label><br><br>
+        <label for="allergy_maybe">Maybe</label>
+    </div>
+</div><br>
 
-        <!-- Agreement -->
-        <label>Is everyone in agreement with the decision to adopt a dog/cat?*</label><br>
+<!-- Agreement Question -->
+<label>Is everyone in agreement with the decision to adopt a dog/cat?*</label>
+<div class="radio-group">
+    <div>
         <input type="radio" id="agreement_yes" name="agreement" value="Yes" required>
-        <label for="agreement_yes">Yes</label><br>
+        <label for="agreement_yes">Yes</label>
+    </div>
+    <div>
         <input type="radio" id="agreement_no" name="agreement" value="No">
-        <label for="agreement_no">No</label><br><br>
+        <label for="agreement_no">No</label>
+    </div>
+</div><br>
 
-        <!-- Love and Attention -->
-        <label>Do you have time to provide adequate love and attention?*</label><br>
+<!-- Love and Attention Question -->
+<label>Do you have time to provide adequate love and attention?*</label>
+<div class="radio-group">
+    <div>
         <input type="radio" id="love_yes" name="time_for_pet" value="Yes" required>
-        <label for="love_yes">Yes</label><br>
+        <label for="love_yes">Yes</label>
+    </div>
+    <div>
         <input type="radio" id="love_no" name="time_for_pet" value="No">
-        <label for="love_no">No</label><br>
+        <label for="love_no">No</label>
+    </div>
+    <div>
         <input type="radio" id="love_maybe" name="time_for_pet" value="Maybe">
-        <label for="love_maybe">Maybe</label><br><br>
+        <label for="love_maybe">Maybe</label>
+    </div>
+</div><br>
+
 
         <!-- Past Experience -->
         <label for="experience">Any past experience with pets?</label><br>
@@ -94,14 +119,25 @@
         <label for="consent_form">Consent Form*</label>
         <input type="file" id="consent_form" name="consent_form" accept=".pdf,.doc,.docx" required><br><br>
 
-        <!-- Agreement for Photos -->
-        <label>Do you agree to send photos of dogs/cats on a regular basis (Monthly)?*</label><br>
+       
+<!-- Regular Updates Question -->
+<label>Do you agree to send photos of dogs/cats on a regular basis (Monthly)?*</label>
+<div class="radio-group">
+    <div>
         <input type="radio" id="photos_yes" name="regular_updates" value="Yes" required>
-        <label for="photos_yes">Yes</label><br>
+        <label for="photos_yes">Yes</label>
+    </div>
+    <div>
         <input type="radio" id="photos_no" name="regular_updates" value="No">
-        <label for="photos_no">No</label><br>
+        <label for="photos_no">No</label>
+    </div>
+    <div>
         <input type="radio" id="photos_maybe" name="regular_updates" value="Maybe">
-        <label for="photos_maybe">Maybe</label><br><br>
+        <label for="photos_maybe">Maybe</label>
+    </div>
+</div><br>
+
+
 
         <!-- Photo of Pet -->
         <label for="pet_photo">Photo of Pet you are adopting</label>
