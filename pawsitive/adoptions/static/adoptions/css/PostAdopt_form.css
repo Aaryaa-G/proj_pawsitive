@@ -77,14 +77,12 @@ form input[type="radio"] {
     display: flex;
     flex-direction: column; /* Stack each radio option vertically */
     gap: 8px;
-     /* Space between each radio option */
-     /* Space between each radio option */
+     
 }
 
 .radio-group div {
     display: flex;
     align-items: center; /* Align radio button and label horizontally */
-    gap: 4px;
     gap: 4px;
      /* Space between radio button and label */
 }
